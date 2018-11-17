@@ -9,7 +9,7 @@ import java.util.function.Predicate;
 /**
  *
  * @author Adam Hennefer
- * CS401 Assignment #6
+ * CS401 11.16.18 
  * Travis-CI introduction
  * 
  */
@@ -54,11 +54,6 @@ public class Hw6 {
         Predicate<String> matchFirstPositionStr = (s)-> s == "first";
         Predicate<String> matchOtherPositionStr = (s)-> s == "third";
         Predicate<String> noMatchStr = (s)-> s == "noMatch";
-
-//        Predicate<Integer> same = (x, y)->(return x == y);
-//        Predicate<String> comparator = (x, s2)-> {
-//            if(s1 == s2) return true;
-//        };
         
         // print int list
         System.out.print("iList = ");
@@ -66,14 +61,10 @@ public class Hw6 {
             System.out.print(iList.get(i)+", ");
         }
         System.out.println();
-        
-        int firstPosMatch = linearSearch(iList, matchFirstPositionInt);
-        int otherPosMatch = linearSearch(iList, matchOtherPositionInt);
-        int noPosMatch = linearSearch(iList, notMatchInt);
-                    
-        System.out.println("First Position: "+firstPosMatch);
-        System.out.println("Other Position: "+otherPosMatch);
-        System.out.println("No Match Position: "+noPosMatch);
+                            
+        System.out.println("First Position: "+linearSearch(iList, matchFirstPositionInt));
+        System.out.println("Other Position: "+linearSearch(iList, matchOtherPositionInt));
+        System.out.println("No Match Position: "+linearSearch(iList, notMatchInt));
         
         //print out the string list
         System.out.print("sList = ");
@@ -81,14 +72,10 @@ public class Hw6 {
             System.out.print(sList.get(i)+", ");
         }
         System.out.println();
-        
-        int firstPosMatchStr = linearSearch(sList, matchFirstPositionStr);
-        int otherPosMatchStr = linearSearch(sList, matchOtherPositionStr);
-        int noPosMatchStr = linearSearch(sList, noMatchStr);
-        
-        System.out.println("First Position: "+firstPosMatchStr);
-        System.out.println("Other Position: "+otherPosMatchStr);
-        System.out.println("No Match Position: "+noPosMatchStr);
+                
+        System.out.println("First Position: "+linearSearch(sList, matchFirstPositionStr));
+        System.out.println("Other Position: "+linearSearch(sList, matchOtherPositionStr));
+        System.out.println("No Match Position: "+linearSearch(sList, noMatchStr));
         
     }
 }
