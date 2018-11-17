@@ -90,6 +90,7 @@ public class Hw6 {
         System.out.println("Other Position: "+otherPosMatchStr);
         System.out.println("No Match Position: "+noPosMatchStr);
         
+    }
 }
     
 
